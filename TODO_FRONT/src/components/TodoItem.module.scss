@@ -1,0 +1,12 @@
+@use "../assets/styles/mixins" as mixin;
+
+li {
+  @include mixin.xs {
+    flex-direction: column;
+  }
+  span {
+    @include mixin.xs {
+      margin-bottom: 20px;
+    }
+  }
+}
