@@ -1,8 +1,11 @@
 import styles from "./TodoItem.module.scss";
+
+export const MODIFY_TODO ="http://localhost:8000/modifyTodo"
+
 export default function TodoItem({ todo, deleteTodo, updateTodo }) {
   async function modifyTodo(newTodo) {
     try {
-      const response = await fetch("http://localhost:8000/modifyTodo", {
+      const response = await fetch(MODIFY_TODO, {
         method: "POST",
         body: JSON.stringify(newTodo),
         headers: {
@@ -56,9 +59,7 @@ export default function TodoItem({ todo, deleteTodo, updateTodo }) {
             modifyTodo({ ...todo, edit: !todo.edit });
           }}
           className={"btn btn-primary mr10"}
-        >
-          Modifier
-        </button>
+        >Modifier</button>
         <button
           onClick={() => handleDeleteTodo(todo)}
           className={"btn btn-primary-reverse mr10"}
