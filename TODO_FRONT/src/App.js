@@ -4,13 +4,15 @@ import TodoItem from "./components/TodoItem";
 import TodoList from "./components/TodoList";
 import React, { useEffect, useState } from "react";
 
+export const GET_TODOS = "http://localhost:8000/getTodos"
+
 function App() {
   const [todoList, setTodoList] = useState([]);
 
   useEffect(() => {
     async function getTodoList() {
       try {
-        const response = await fetch("http://localhost:8000/getTodos");
+        const response = await fetch(GET_TODOS);
         if (response.ok) {
           const todos = await response.json();
           setTodoList(todos);
