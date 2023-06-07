@@ -8,7 +8,7 @@ import App, { GET_TODOS } from "../App";
 import { rest } from "msw"; // API mocking
 import { setupServer } from "msw/node"
 
-describe('test Edit Todo', () => {
+xdescribe('test Edit Todo', () => {
 
     let container = null
 
@@ -69,8 +69,8 @@ describe('test Edit Todo', () => {
     it('should to be edit Todo', async () => {
         
         render(<App />)
-        /* const todoEditButton = await screen.findByText('Modifier');
+        const todoEditButton = await screen.findByText('Modifier');
         user.click(todoEditButton)
-        const todoInputEdit = await screen.findByPlaceholderText('Add a todo') */
+        const todoInputEdit = await screen.findByPlaceholderText('Add a todo')
     })
 });

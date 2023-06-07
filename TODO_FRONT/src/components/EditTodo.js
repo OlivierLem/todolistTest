@@ -47,7 +47,7 @@ export default function EditTodo({ todo, updateTodo }) {
         type="text"
         onChange={handleChange}
         onKeyDown={handleKeyDown}
-        placeholder="Add a todo"
+        placeholder="edit a todo"
         className="mr20 flex-fill p10"
       />
       <button

@@ -65,7 +65,7 @@ xdescribe('todoItem test todo value', () => {
         expect(todoContentDone).toBeInTheDocument()
     });
 
-    // * on simule la route getTodos et on lui met une fausse todo 
+    // * on simule la route getTodos avec msw et on lui met une fausse todo
     // * si on retire la todo et return res 
     // * on peut tester directement sur la todo du back
     const todoResponse = rest.get(GET_TODOS, (req, res, ctx) => {
