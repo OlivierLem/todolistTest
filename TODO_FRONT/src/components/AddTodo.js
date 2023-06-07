@@ -58,7 +58,7 @@ export default function AddTodo({ addTodo }) {
           onChange={handleChange}
           onKeyDown={handleKeyDown}
           placeholder="Add a todo"
-          className="mr20 flex-fill p10"
+          className="mr20 flex-fill p10 addTodoInput"
         />
         <button onClick={handleClick} className="btn btn-primary">
           Add

@@ -41,7 +41,7 @@ export default function EditTodo({ todo, updateTodo }) {
     }
   }
   return (
-    <div className="d-flex justify-content-center align-items-center mb20">
+    <div className="editTodo d-flex justify-content-center align-items-center mb20">
       <input
         value={value}
         type="text"

@@ -56,6 +56,7 @@ describe('test Edit Todo', () => {
 
         const lastItem = await screen.findByText(/Learn Test with Jest/)
         expect(lastItem).toBeInTheDocument()
+        //debug()
     })
 });
 
