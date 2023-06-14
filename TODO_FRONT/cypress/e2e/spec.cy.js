@@ -9,6 +9,12 @@ describe('template spec', () => {
     cy.get('.addTodoInput').type('Learn Test With Cypress')
     cy.get('.btn').contains('Add').click()
     cy.get('ul li').last().contains('span', 'Learn Test With Cypress')
+    
+    // * Add Todo Sans Valeur
+    // * Comme l'étape précédentes mais sans donner de valeur à l'input addTodo
+    cy.get('.addTodoInput')
+    cy.get('.btn').contains('Add').click()
+    cy.get('ul li').should('have.length', 4)
 
     // * Done Todo
     // * On click sur le boutton 'A faire' de la todo précédement ajouter 
@@ -48,7 +54,9 @@ describe('template spec', () => {
 
     // * Delete Todo
     // * On Supprime la todo créer au début du test en clickant sur le boutton 'supprimer'
+    // * et on vérifie que la liste n'as plus que 3 todo  
     cy.get('ul li div').last().contains('.btn', 'Supprimer').click()
+    cy.get('ul li').should('have.length', 3)
   })
 
   it('test addtodo with enter', () => {
@@ -63,5 +71,7 @@ describe('template spec', () => {
     // * Delete Todo
     // * On Supprime la todo créer au début du test en clickant sur le boutton 'supprimer'
     cy.get('ul li div').last().contains('.btn', 'Supprimer').click()
+    cy.get('ul li').should('have.length', 3)
+
   });
 })
